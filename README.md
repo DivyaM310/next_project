@@ -63,7 +63,6 @@ To run the application using Docker, follow these steps:
    Visit [http://localhost:3000](http://localhost:3000) to view the application.
 
 ## Imported Packages
-- `react`: A JavaScript library for building user interfaces.
 - `firebase`: The Firebase SDK for JavaScript.
 - `firebase/firestore`: Specific Firestore module for Firebase.
 - `tailwindcss`: A utility-first CSS framework for quickly building custom designs.
