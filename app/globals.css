@@ -1,0 +1,95 @@
+/* Tailwind CSS equivalent */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom styles */
+h2 {
+  font-family: Arial;
+  font-size: 24px;
+  font-weight: bold;
+  color: #172554;
+}
+
+main {
+  @apply bg-gradient-to-br from-cyan-50 via-sky-100 to-blue-200 flex flex-col items-stretch justify-center p-4 sm:p-20 overflow-y-auto w-full; /* Adjust padding for small screens */
+}
+
+.navbar {
+  @apply flex justify-between items-center bg-[#172554] p-4 rounded-2xl shadow-md;
+}
+
+.navbar ul {
+  @apply flex justify-center list-none m-0 p-0;
+}
+
+.navbar li {
+  @apply justify-center m-0 p-0;
+}
+
+.navbar a {
+  @apply text-white opacity-80 hover:opacity-100 transition-opacity duration-300;
+}
+
+.container {
+  @apply flex flex-col items-center max-w-[1500px] pb-10; /* Add padding bottom */
+}
+
+form {
+  @apply w-full max-w-[600px] p-8 bg-white rounded-2xl shadow-md mb-8; /* Add margin bottom */
+}
+
+label {
+  @apply block font-bold mb-2;
+}
+
+input {
+  @apply w-full p-3 border rounded-md border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
+}
+
+form button {
+  @apply w-full bg-blue-950 text-white rounded-md py-3 px-4 hover:bg-blue-600 mt-4; /* Add margin top */
+}
+
+/* Increase specificity for button inside form */
+form button[type="submit"] {
+  @apply w-full bg-blue-950 text-white rounded-md py-3 px-4 hover:bg-blue-600;
+}
+button {
+  @apply w-full p-3 bg-blue-950 text-white rounded-md hover:bg-blue-600;
+}
+/* Table styles */
+.table-container {
+  @apply max-w-full overflow-x-auto; /* Make the container scrollable horizontally */
+}
+
+table {
+  @apply w-full max-w-full sm:max-w-[1000px] border-collapse rounded-2xl overflow-hidden shadow-md; /* Adjust max-width for small screens */
+}
+
+th, td {
+  @apply p-4 text-left;
+}
+
+thead {
+  @apply bg-gray-100;
+}
+
+tr:nth-child(even) {
+  @apply bg-slate-50;
+}
+
+/* Responsive styles */
+@media (max-width: 640px) { /* Adjust the max-width as per your preference */
+  main {
+    @apply p-4; /* Adjust padding for smaller screens */
+  }
+
+  form {
+    @apply p-6; /* Adjust padding for smaller screens */
+  }
+
+  form button {
+    @apply mt-3; /* Adjust margin top for smaller screens */
+  }
+}
